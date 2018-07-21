@@ -9,7 +9,6 @@ public class SampleJava
 		a.add("arun");
 		a.add("balaji");
 		a.add("hiii");
-		a.remove(1);
 		a.remove(0);
 		if(a.isEmpty())
 		{
