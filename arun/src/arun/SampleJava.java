@@ -12,7 +12,7 @@ public class SampleJava
 		a.remove(0);
 		if(a.isEmpty())
 		{
-			System.out.println("List is empty");
+			System.out.println("My commit to git");
 		}
 		else
 		{
