@@ -28,6 +28,8 @@ import java.awt.Font;
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
+					
+					//System.out.println("HIIHIHIH");
 				}
 			}
 		});
