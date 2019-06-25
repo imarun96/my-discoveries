@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+
+public class NewClass {
+	public static void main(String[] args) {
+		HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+		ArrayList<Integer> ar = new ArrayList<>();
+		ArrayList<Integer> ar1 = new ArrayList<>();
+		ar.add(1);
+		ar.add(5);
+		ar.add(5);
+		ar.add(5);
+		ar.add(5);
+		ar.add(5);
+		ar.add(5);
+		ar.add(5);
+		ar.add(8);
+		ar.add(8);
+		System.out.println(ar);
+		for (int s1 : ar) {
+			if (hm.get(s1) != null) {
+				hm.put(s1, hm.get(s1) + 1);
+			} else {
+				hm.put(s1, 1);
+			}
+		}
+		System.out.println(hm);
+		Iterator<Integer> tempString = hm.keySet().iterator();
+		while (tempString.hasNext()) {
+			int temp = tempString.next();
+			ar1.add(hm.get(temp));
+		}
+		Collections.sort(ar1);
+		Collections.reverse(ar1);
+		System.out.println(ar1);
+		int a = 0;
+		while (a < ar1.size()) {
+			int c = (int) ar1.get(a);
+			for (Entry<Integer, Integer> entry : hm.entrySet()) {
+				for (int i = 0; i < c; i++) {
+					if (entry.getValue().equals(c)) {
+						System.out.println(entry.getKey());
+					}
+				}
+			}
+			a++;
+		}
+	}
+}
